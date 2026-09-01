@@ -1,1 +1,57 @@
+# List of students
+students_list = ["Alice", "Bob", "Charlie"]
+print("Original List:", students_list)
 
+# Add
+students_list.append("David")
+print("After Add:", students_list)
+
+# Update
+students_list[1] = "Bobby"
+print("After Update:", students_list)
+
+# Delete
+students_list.remove("Charlie")
+print("After Delete:", students_list)
+
+
+# Dictionary of students (Roll No : Name)
+students_dict = {101: "Alice", 102: "Bob", 103: "Charlie"}
+print("Original Dictionary:", students_dict)
+ 
+# Add
+students_dict[104] = "David"
+print("After Add:", students_dict)
+ 
+# Update
+students_dict[102] = "Bobby"
+print("After Update:", students_dict)
+ 
+# Delete
+del students_dict[103]
+print("After Delete:", students_dict)
+
+
+# Tuple of students
+students_tuple = ("Alice", "Bob", "Charlie")
+print("Original Tuple:", students_tuple)
+
+# Tuples are immutable, so convert to list first
+temp_list = list(students_tuple)
+ 
+# Add
+temp_list.append("David")
+students_tuple = tuple(temp_list)
+print("After Add:", students_tuple)
+ 
+# Update
+temp_list = list(students_tuple)
+temp_list[1] = "Bobby"
+students_tuple = tuple(temp_list)
+print("After Update:", students_tuple)
+ 
+# Delete
+temp_list = list(students_tuple)
+temp_list.remove("Charlie")
+students_tuple = tuple(temp_list)
+print("After Delete:", students_tuple)
