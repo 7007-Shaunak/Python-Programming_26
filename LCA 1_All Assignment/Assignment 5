@@ -1,1 +1,11 @@
+import re
 
+def is_valid_string(s):
+    pattern = r'^[a-zA-Z0-9]+$'
+    return bool(re.fullmatch(pattern, s))
+ 
+# Example usage
+test_strings = ["Hello123", "Python3", "abc_123", "Test@123"]
+ 
+for s in test_strings:
+    print(f"{s}: {is_valid_string(s)}")
